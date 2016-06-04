@@ -1,18 +1,9 @@
 source 'https://rubygems.org'
-ruby '2.1.3'
+ruby '2.3.2'
 
-gem 'rails', '~> 4.1.6'
+gem 'rails', '~> 4.2.6'
 
-#
-# PLATFORM SPECIFIC
-#
-# OSX
-gem 'rb-fsevent', group: [:development, :test]        # monitor file changes without hammering the disk
-gem 'terminal-notifier-guard', group: [:development]  # notify terminal when specs run
-gem 'terminal-notifier', group: [:development]
-# LINUX
-# gem 'rb-inotify', :group => [:development, :test]   # monitor file changes without hammering the disk
-
+gem 'rb-inotify', :group => [:development, :test]   # monitor file changes without hammering the disk
 
 
 # Monitoring
@@ -26,7 +17,7 @@ gem 'airbrake', '~> 3.2.1'         # use with airbrake.io or errbit
 gem 'pg'
 gem 'dalli'                     # memcached
 # gem 'schema_plus'             # add better index and foreign key support
-# gem 'jbuilder'
+gem 'jbuilder'
 
 # Assets
 gem 'sass-rails'
@@ -35,17 +26,12 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'headjs-rails'
 
+# Database
+gem 'mysql2'
+
 # Javascript
 gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jquery-turbolinks'
 gem 'nprogress-rails'
-
-# CoffeeScript
-# Not needed in production if precompiling assets
-gem 'coffee-rails'
-# Uncomment if node.js is not installed
-# gem 'therubyracer', platforms: :ruby
 
 # Design
 gem 'bootstrap-sass'
